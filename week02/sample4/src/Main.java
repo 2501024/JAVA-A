@@ -1,10 +1,19 @@
+import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        Scanner keyboard = new Scanner(System.in);
+        String name = "";
+        short age = 0;
 
-        System.out.println();
-        System.out.println(name + "님의 나이는 " + age + "살 입니다.");
-        System.out.println(name + "님의 성별은 " + gender + "(" + genderStr + ") 입니다.");
-    }}
+        System.out.print("당신의 이름은 ? ");
+        name = keyboard.nextLine();
+        System.out.printf("%s님의 나이는 ? ", name);
+        age = keyboard.nextShort();
+
+        System.out.printf("\n%s님의 나이는 %d살 입니다.\n", name, age);
+
+    }
+}
